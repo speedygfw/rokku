@@ -1,0 +1,27 @@
+{
+  "name": "rokku",
+  "version": "1.0.0",
+  "description": "simple CLI tool for creating an managing Dokku apps",
+  "main": "rokku.js",
+  "dependencies": {
+    "ssh2": "^0.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/speedygfw/rokku.git"
+  },
+  "keywords": [
+    "dokku",
+    "dokkuclient",
+    "ssh2wrapper"
+  ],
+  "author": "Frank Wallenborn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/speedygfw/rokku/issues"
+  },
+  "homepage": "https://github.com/speedygfw/rokku#readme"
+}
