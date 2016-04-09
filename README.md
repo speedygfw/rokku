@@ -20,3 +20,19 @@ config.ssh = {
 module.exports = config;
 
 ```
+
+# Usage
+
+You can use all dokku commands. 
+
+Examples:
+
+```javascript
+node rokku.js //displays all commands
+node rokku.js apps //displays all apps
+node rokku.js deploy appname //deploy your app
+
+```
+
+Hint:
+You can also use the bash script: rokku.sh

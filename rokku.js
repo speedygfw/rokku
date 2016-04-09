@@ -10,8 +10,10 @@ var config = require('./config');
 var conn = new Client();
 conn.on('ready', function() {
   console.log('Client connect');
-  var dokkuparam = process.argv[2];
-  conn.exec('dokku ' + dokkuparam, function(err, stream) {
+  var dokkuparam = process.argv;
+  dokkuparam.shift();
+  dokkuparam.shift();
+  conn.exec('dokku ' + dokkuparam.join(' '), function(err, stream) {
     if (err) throw err;
     stream.on('close', function(code, signal) {
       conn.end();
