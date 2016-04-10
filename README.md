@@ -4,25 +4,22 @@ simple CLI tool for creating an managing Dokku apps.
 
 
 # Install
-Clone this repo and add a new config.json:
+```javascript
+npm install rokku
+```
+Setup auth
+
 
 ```javascript
 
-var config = {};
+npm config set rokku:username 'yourusername'
+npm config set rokku:host 'example.com'
+npm config set rokku:port 22
+npm config set rokku:keypath 'C:/Users/fwall/.ssh/id_rsa'
 
-config.ssh = {
-  host: 'yourhost',
-  port: 22,
-  username: 'yourusername',
-  privateKey: require('fs').readFileSync('path/to/your/id_rsa')
-  //password: 'yourpassword'
-};
-
-
-module.exports = config;
 
 ```
-you can also setup a password instead of privatekey in config.ssh
+you can also setup a password instead of privatekey
 
 # Usage
 
@@ -31,11 +28,8 @@ You can use all dokku commands.
 Examples:
 
 ```javascript
-node rokku.js //displays all commands
-node rokku.js apps //displays all apps
-node rokku.js deploy appname //deploy your app
+rokku //displays all commands
+rokku apps //displays all apps
+rokku deploy appname //deploy your app
 
 ```
-
-Hint:
-You can also use the bash script: rokku.sh
