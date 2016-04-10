@@ -1,10 +1,10 @@
 var config = {};
 
 config.ssh = {
-  host: 'wall-it.net',
+  host: process.env.npm_package_config_hostname,
   port: process.env.npm_package_config_port,
-  username: 'root',
-  privateKey: require('fs').readFileSync('C:/Users/fwall/.ssh/id_rsa')
+  username: process.env.npm_package_config_username,
+  privateKey: require('fs').readFileSync(process.env.npm_package_keypath)
 };
 
 
