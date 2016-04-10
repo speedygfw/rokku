@@ -1,5 +1,6 @@
 # rokku
-simple CLI tool for creating an managing Dokku apps
+simple CLI tool for creating an managing Dokku apps.
+
 
 
 # Install
@@ -14,16 +15,18 @@ config.ssh = {
   port: 22,
   username: 'yourusername',
   privateKey: require('fs').readFileSync('path/to/your/id_rsa')
+  //password: 'yourpassword'
 };
 
 
 module.exports = config;
 
 ```
+you can also setup a password instead of privatekey in config.ssh
 
 # Usage
 
-You can use all dokku commands. 
+You can use all dokku commands.
 
 Examples:
 
